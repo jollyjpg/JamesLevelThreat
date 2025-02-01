@@ -6,7 +6,7 @@ using HarmonyLib;
 using CardChoiceSpawnUniqueCardPatch.CustomCategories;
 
 
-namespace MyModNameSpace
+namespace JamesLevelThreat
 {
     // These are the mods required for our mod to work
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
@@ -16,13 +16,14 @@ namespace MyModNameSpace
     [BepInPlugin(ModId, ModName, Version)]
     // The game our mod is associated with
     [BepInProcess("Rounds.exe")]
-    public class MyModName : BaseUnityPlugin
+    public class JamesLevelThreat : BaseUnityPlugin
     {
         private const string ModId = "com.My.Mod.Id";
         private const string ModName = "JamesLevelThreat";
         public const string Version = "0.0.0"; // What version are we on (major.minor.patch)?
+        public const string ModInitials = "JLT";
 
-
+        public static JamesLevelThreat instance { get; private set; }
         void Awake()
         {
             // Use this to call any harmony patch files your mod may have
@@ -31,6 +32,7 @@ namespace MyModNameSpace
         }
         void Start()
         {
+            instance = this;
             CustomCard.BuildCard<MyCardName>();
         }
     }
