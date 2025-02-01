@@ -18,7 +18,7 @@ namespace JamesLevelThreat
     [BepInProcess("Rounds.exe")]
     public class JamesLevelThreat : BaseUnityPlugin
     {
-        private const string ModId = "com.My.Mod.Id";
+        private const string ModId = "com.zachbulb.JamesLevelThreat";
         private const string ModName = "JamesLevelThreat";
         public const string Version = "0.0.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "JLT";
@@ -33,7 +33,7 @@ namespace JamesLevelThreat
         void Start()
         {
             instance = this;
-            CustomCard.BuildCard<MyCardName>();
+            CustomCard.BuildCard<EvasiveManeuvers>();
         }
     }
 }
