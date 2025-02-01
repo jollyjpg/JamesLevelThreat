@@ -33,7 +33,7 @@ namespace JamesLevelThreat
         void Start()
         {
             instance = this;
-            CustomCard.BuildCard<EvasiveManeuvers>();
+            CustomCard.BuildCard<HollowPurple>();
         }
     }
 }
