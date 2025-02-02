@@ -48,9 +48,9 @@ namespace JamesLevelThreat.Cards
         {
             return null;
         }
-        protected override CardInfo.Rarity GetRarity()
+        protected override CardInfo.Rarity GetRarity() 
         {
-            return Rarities.James;
+            return CardInfo.Rarity.Rare;
         }
         protected override CardInfoStat[] GetStats()
         {
