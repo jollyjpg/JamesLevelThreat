@@ -40,6 +40,9 @@ namespace JamesLevelThreat.Cards
             //var explosionToSpawn = Resources.Load<GameObject>("0 cards/Explosive Bullet").GetComponent<Gun>().objectsToSpawn[0];
             //gun.objectsToSpawn = new ObjectsToSpawn[] { explosionToSpawn }; cardInfo.allowMultiple = false;
             var fieldToSpawn = Resources.Load<GameObject>("0 cards/Static Field").GetComponent<CharacterStatModifiers>().AddObjectToPlayer;
+            fieldToSpawn.transform.localScale = new Vector3(5, 5, 5);
+            var explosionStaticField = fieldToSpawn.GetComponent<SpawnObjects>().objectToSpawn[0];
+            explosionStaticField.GetComponent<Explosion>().damage = 5;
             statModifiers.AddObjectToPlayer = fieldToSpawn;
         }
 
