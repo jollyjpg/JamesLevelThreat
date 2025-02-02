@@ -22,15 +22,6 @@ public class HeavenlyRestriction : SimpleCard
         Art = null,
         Rarity = RarityUtils.GetRarity("BindingVow"),
         Theme = CardThemeColor.CardThemeColorType.ColdBlue,
-        Stats = new CardInfoStat[] {
-            new CardInfoStat()
-                {
-                    positive = true,
-                    stat = "",
-                    amount = "speed",
-                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
-                }
-        }
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {

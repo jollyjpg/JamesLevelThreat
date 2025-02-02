@@ -22,6 +22,15 @@ namespace JamesLevelThreat.Cards
             Rarity = CardInfo.Rarity.Rare,
             //or use RarityUtils.GetRarity("insert") if custom rarity
             Theme = CardThemeColor.CardThemeColorType.MagicPink,
+            Stats = new CardInfoStat[] {
+            new CardInfoStat()
+                {
+                    positive = true,
+                    stat = "",
+                    amount = "",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                }
+        }
         };
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {

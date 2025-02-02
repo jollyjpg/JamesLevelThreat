@@ -22,13 +22,29 @@ public class FreeDog2025 : SimpleCard
         Art = null,
         Rarity = CardInfo.Rarity.Uncommon,
         Theme = CardThemeColor.CardThemeColorType.FirepowerYellow,
+        Stats = new CardInfoStat[] {
+            new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "attack speed",
+                    amount = "-80%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+            new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "projectile speed",
+                    amount = "-75%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                }
+        }
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
         gun.attackSpeed = 5;
         gun.projectileSpeed = 0.25f;
         gun.gravity = 0;
-        gun.damage = 1.5f;
+        gun.damage = 2f;
         var bomb = Resources.Load<GameObject>("0 cards/Timed Detonation").GetComponent<Gun>().objectsToSpawn[0];
         var homingThing = Resources.Load<GameObject>("0 cards/Homing").GetComponent<Gun>().objectsToSpawn[0];
         gun.objectsToSpawn = new ObjectsToSpawn[] { bomb, homingThing };

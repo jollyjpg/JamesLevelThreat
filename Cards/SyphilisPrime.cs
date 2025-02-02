@@ -34,7 +34,7 @@ namespace JamesLevelThreat.Cards
             new CardInfoStat()
                 {
                     positive = false,
-                    stat = "",
+                    stat = "it is",
                     amount = "contagious",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
