@@ -20,7 +20,6 @@ namespace JamesLevelThreat.Cards
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{JamesLevelThreat.ModInitials}][Card] {GetTitle()} has been setup.");
             cardInfo.allowMultiple = false;
-            gun.projectileColor = Color.white;
             gun.ignoreWalls = true;
             gun.damage = 2;
         }
@@ -29,6 +28,7 @@ namespace JamesLevelThreat.Cards
             //Edits values on player when card is selected
             UnityEngine.Debug.Log($"[{JamesLevelThreat.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
             gun.unblockable = true;
+            gun.projectileColor = Color.white;
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -73,15 +73,5 @@ namespace JamesLevelThreat.Cards
         {
             return JamesLevelThreat.ModInitials;
         }
-    }
-
-    public class SimplePoison : CardEffect
-    {
-        public override void OnShoot(GameObject projectile)
-        {
-            
-            projectile.AddComponent<RayHitPoison>();
-        }
-
     }
 }
