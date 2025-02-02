@@ -26,11 +26,13 @@ public class FreeDog2025 : SimpleCard
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
         gun.attackSpeed = 5;
-        gun.projectileSpeed = 0.5f;
+        gun.projectileSpeed = 0.25f;
         gun.gravity = 0;
         gun.damage = 1.5f;
         var bomb = Resources.Load<GameObject>("0 cards/Timed Detonation").GetComponent<Gun>().objectsToSpawn[0];
         gun.objectsToSpawn = new ObjectsToSpawn[] { bomb };
+        var homingThing = Resources.Load<GameObject>("0 cards/Homing").GetComponent<Gun>().objectsToSpawn[0];
+        gun.objectsToSpawn = new ObjectsToSpawn[] { homingThing };
     }
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
