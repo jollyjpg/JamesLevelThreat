@@ -43,7 +43,8 @@ namespace JamesLevelThreat
             instance = this;
             CustomCard.BuildCard<HollowPurple>();
             CustomCard.BuildCard<Infinity>();
-
+            CustomCard.BuildCard<ISPOH>();
+            CustomCard.BuildCard<HivelordsHubris>();
         }
     }
 }
