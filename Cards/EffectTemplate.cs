@@ -19,6 +19,7 @@ namespace JamesLevelThreat.Cards
         {
             Title = "CardName",
             Description = "CardDescription",
+            ModName = "JLT",
             Rarity = CardInfo.Rarity.Rare,
             //or use RarityUtils.GetRarity("insert") if custom rarity
             Theme = CardThemeColor.CardThemeColorType.MagicPink,

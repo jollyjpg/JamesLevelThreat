@@ -10,6 +10,7 @@ using RarityLib;
 using RarityLib.Utils;
 using ModsPlus;
 using SimulationChamber;
+using UnityEngine.Assertions.Must;
 
 
 namespace JamesLevelThreat.Cards
@@ -20,6 +21,7 @@ namespace JamesLevelThreat.Cards
         {
             Title = "ATOMIC BOMB",
             Description = "Your imminent demise.",
+            ModName = "JLT",
             Rarity = RarityUtils.GetRarity("Honored"),
             //or use RarityUtils.GetRarity("insert") if custom rarity
             Theme = CardThemeColor.CardThemeColorType.DestructiveRed,
@@ -51,7 +53,7 @@ namespace JamesLevelThreat.Cards
             gun.spread = 0f;
             gun.evenSpread = 0f;
             gun.damage = 100;
-            gun.SimulatedAttack(this.player.playerID, new Vector3(0, 0, 0), new Vector3(0, -10, 0), 0, 1.5f);
+            gun.SimulatedAttack(this.player.playerID, new Vector3(0, 15, 0), new Vector3(0, -10, 0), 1f, 1.5f);
         }
         
         public override void OnShoot(GameObject projectile)
