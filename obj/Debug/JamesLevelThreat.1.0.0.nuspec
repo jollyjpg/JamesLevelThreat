@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>JamesLevelThreat</id>
+    <version>1.0.0</version>
+    <authors>JamesLevelThreat</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="b48675c1da135c4ce0ddd039a04338c77798add4" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\JamesLevelThreat\bin\Debug\netstandard2.1\JamesLevelThreat.dll" target="lib\netstandard2.1\JamesLevelThreat.dll" />
+  </files>
+</package>

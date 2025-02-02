@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using UnboundLib;
 using UnboundLib.Cards;
 using UnityEngine;
+using RarityLib;
+using RarityLib.Utils;
 
 
 namespace JamesLevelThreat.Cards
@@ -48,7 +50,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Rare;
+            return RarityUtils.GetRarity("James");
         }
         protected override CardInfoStat[] GetStats()
         {

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using UnboundLib;
 using UnboundLib.Cards;
 using UnityEngine;
+using RarityLib;
 
 
 namespace JamesLevelThreat.Cards

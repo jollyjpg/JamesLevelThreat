@@ -4,6 +4,9 @@ using UnboundLib.Cards;
 using JamesLevelThreat.Cards;
 using HarmonyLib;
 using CardChoiceSpawnUniqueCardPatch.CustomCategories;
+using RarityLib;
+using RarityLib.Utils;
+using UnityEngine;
 
 
 namespace JamesLevelThreat
@@ -29,6 +32,9 @@ namespace JamesLevelThreat
             // Use this to call any harmony patch files your mod may have
             var harmony = new Harmony(ModId);
             harmony.PatchAll();
+
+            // rarities
+            RarityUtils.AddRarity("James", 0.025f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
         }
         void Start()
         {

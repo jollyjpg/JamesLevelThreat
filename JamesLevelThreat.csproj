@@ -21,6 +21,9 @@
     <Reference Include="ModdingUtils">
       <HintPath>..\..\..\..\..\Roaming\r2modmanPlus-local\ROUNDS\profiles\mod thing\BepInEx\plugins\Pykess-ModdingUtils\ModdingUtils.dll</HintPath>
     </Reference>
+    <Reference Include="RarityLib">
+      <HintPath>..\..\..\..\..\Roaming\r2modmanPlus-local\ROUNDS\profiles\mod thing\BepInEx\plugins\Root-RarityLib\RarityLib.dll</HintPath>
+    </Reference>
     <Reference Include="UnboundLib">
       <HintPath>..\..\..\..\..\Roaming\r2modmanPlus-local\ROUNDS\profiles\mod thing\BepInEx\plugins\willis81808-UnboundLib\UnboundLib.dll</HintPath>
     </Reference>
