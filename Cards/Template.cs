@@ -45,6 +45,7 @@ namespace JamesLevelThreat.Cards
         protected override CardInfo.Rarity GetRarity()
         {
             return CardInfo.Rarity.Common;
+            //return Rarities.InsertRarity; << use when rarity is defined in rarities.css aka rarity lib
         }
         protected override CardInfoStat[] GetStats()
         {
