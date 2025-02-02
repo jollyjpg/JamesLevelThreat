@@ -9,6 +9,7 @@ using UnityEngine;
 using RarityLib;
 using RarityLib.Utils;
 using ModsPlus;
+using Photon.Pun.Simple;
 
 
 namespace JamesLevelThreat.Cards
@@ -36,6 +37,10 @@ namespace JamesLevelThreat.Cards
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
             block.cdAdd = 30;
+            //var explosionToSpawn = Resources.Load<GameObject>("0 cards/Explosive Bullet").GetComponent<Gun>().objectsToSpawn[0];
+            //gun.objectsToSpawn = new ObjectsToSpawn[] { explosionToSpawn }; cardInfo.allowMultiple = false;
+            var fieldToSpawn = Resources.Load<GameObject>("0 cards/Static Field").GetComponent<CharacterStatModifiers>().AddObjectToPlayer;
+            statModifiers.AddObjectToPlayer = fieldToSpawn;
         }
 
         protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -54,7 +59,7 @@ namespace JamesLevelThreat.Cards
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
             Debug.Log("[ExampleEffect] Player blocked!");
-
+            
         }
 
         public override void OnShoot(GameObject projectile)
