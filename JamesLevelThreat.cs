@@ -50,6 +50,7 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<SyphilisPrime>();
             CustomCard.BuildCard<FreeDog2025>();
             CustomCard.BuildCard<HeavenlyRestriction>();
+            CustomCard.BuildCard<ATOMICBOMB>();
         }
     }
 }
