@@ -22,7 +22,7 @@ namespace JamesLevelThreat.Cards
             gun.numberOfProjectiles = gun.numberOfProjectiles + 10;
             gun.timeBetweenBullets = 0;
             gun.destroyBulletAfter = 0.05f;
-            gun.attackSpeed = 1.25f;
+            gun.attackSpeed = 2f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
