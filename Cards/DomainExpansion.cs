@@ -43,6 +43,7 @@ namespace JamesLevelThreat.Cards
             fieldToSpawn.transform.localScale = new Vector3(5, 5, 5);
             var explosionStaticField = fieldToSpawn.GetComponent<SpawnObjects>().objectToSpawn[0];
             explosionStaticField.GetComponent<Explosion>().damage = 5;
+            explosionStaticField.GetComponent<RemoveAfterSeconds>().seconds = 15;
             statModifiers.AddObjectToPlayer = fieldToSpawn;
         }
 
