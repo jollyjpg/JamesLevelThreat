@@ -45,7 +45,6 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<Infinity>();
             CustomCard.BuildCard<ISPOH>();
             CustomCard.BuildCard<HivelordsHubris>();
-            CustomCard.BuildCard<TestPoisonCard>();
         }
     }
 }
