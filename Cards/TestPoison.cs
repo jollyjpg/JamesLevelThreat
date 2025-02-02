@@ -9,7 +9,6 @@ using UnityEngine;
 using RarityLib;
 using ModsPlus;
 using UnityEngine.Assertions;
-
 public class TestPoisonCard : CustomEffectCard<TestPoison>
 {
     public override CardDetails Details => new CardDetails
@@ -31,6 +30,6 @@ public class TestPoison : CardEffect
     public override void OnShoot(GameObject projectile)
     {
         Debug.Log("[ExampleEffect] Player fired a shot!");
-        projectile.AddComponent<RayHitPoison>();
+        projectile.AddComponent<ISPOHPoison>();
     }
 }
