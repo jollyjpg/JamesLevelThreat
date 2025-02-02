@@ -34,6 +34,7 @@ namespace JamesLevelThreat
         {
             instance = this;
             CustomCard.BuildCard<HollowPurple>();
+            CustomCard.BuildCard<Infinity>();
         }
     }
 }
