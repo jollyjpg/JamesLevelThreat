@@ -24,7 +24,7 @@ namespace JamesLevelThreat.Cards
         {
             //Edits values on player when card is selected
             UnityEngine.Debug.Log($"[{JamesLevelThreat.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
-            characterStats.secondsToTakeDamageOver = 10000;
+            characterStats.secondsToTakeDamageOver = float.PositiveInfinity;
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
