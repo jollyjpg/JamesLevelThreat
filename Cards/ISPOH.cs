@@ -19,6 +19,7 @@ namespace JamesLevelThreat.Cards
         {
             Title = "Inverted Spear of Heaven",
             Description = "Nullfies any cursed technique (including walls)",
+            ModName = "JLT",
             Rarity = RarityUtils.GetRarity("Honored"),
             Theme = CardThemeColor.CardThemeColorType.MagicPink,
         };

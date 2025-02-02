@@ -18,7 +18,7 @@ public class ExampleCard : SimpleCard
     {
         Title = "Example Card",
         Description = "Your first effect card",
-        ModName = "<Your Mod ID>",
+        ModName = "JLT",
         Art = null,
         Rarity = CardInfo.Rarity.Common,
         Theme = CardThemeColor.CardThemeColorType.TechWhite,

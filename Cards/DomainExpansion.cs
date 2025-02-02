@@ -19,6 +19,7 @@ namespace JamesLevelThreat.Cards
         {
             Title = "Domain Expansion",
             Description = "On block, open your domain.",
+            ModName = "JLT",
             Rarity = RarityUtils.GetRarity("Honored"),
             //or use RarityUtils.GetRarity("insert") if custom rarity
             Theme = CardThemeColor.CardThemeColorType.EvilPurple,
@@ -53,6 +54,7 @@ namespace JamesLevelThreat.Cards
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
             Debug.Log("[ExampleEffect] Player blocked!");
+
         }
 
         public override void OnShoot(GameObject projectile)
