@@ -18,7 +18,8 @@ namespace JamesLevelThreat.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{JamesLevelThreat.ModInitials}][Card] {GetTitle()} has been setup.");
-            gun.percentageDamage = 100;
+            gun.unblockable = true;
+            gun.damage = float.PositiveInfinity;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -61,7 +62,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.TechWhite;
         }
         public override string GetModName()
         {

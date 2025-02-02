@@ -21,7 +21,7 @@ namespace JamesLevelThreat.Cards
             gun.damage = 10;
             gun.numberOfProjectiles = gun.numberOfProjectiles + 10;
             gun.timeBetweenBullets = 0;
-            gun.destroyBulletAfter = 0.15f;
+            gun.destroyBulletAfter = 0.05f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -68,7 +68,7 @@ namespace JamesLevelThreat.Cards
                 {
                     positive = true,
                     stat = "damage",
-                    amount = "point blank",
+                    amount = "a couple more",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
                 new CardInfoStat()
@@ -82,7 +82,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.DestructiveRed;
         }
         public override string GetModName()
         {
