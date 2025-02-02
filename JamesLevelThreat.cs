@@ -15,6 +15,7 @@ namespace JamesLevelThreat
     [BepInDependency("com.willis.rounds.unbound", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.moddingutils", BepInDependency.DependencyFlags.HardDependency)]
     [BepInDependency("pykess.rounds.plugins.cardchoicespawnuniquecardpatch", BepInDependency.DependencyFlags.HardDependency)]
+    [BepInDependency("root.rarity.lib")]
     // Declares our mod to Bepin
     [BepInPlugin(ModId, ModName, Version)]
     // The game our mod is associated with
@@ -23,7 +24,7 @@ namespace JamesLevelThreat
     {
         private const string ModId = "com.zachbulb.JamesLevelThreat";
         private const string ModName = "JamesLevelThreat";
-        public const string Version = "0.0.0"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.0.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "JLT";
 
         public static JamesLevelThreat instance { get; private set; }
