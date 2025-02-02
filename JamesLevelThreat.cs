@@ -35,7 +35,8 @@ namespace JamesLevelThreat
             harmony.PatchAll();
 
             // rarities
-            RarityUtils.AddRarity("James", 0.025f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
+            RarityUtils.AddRarity("Honored", 0.025f, new Color(1, 0.847f, 0.514f), new Color(0.75f, 0.597f, 0.264f));
+            RarityUtils.AddRarity("James", 0.005f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
         }
         void Start()
         {

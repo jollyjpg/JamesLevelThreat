@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JamesLevelThreat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6fe55f61575dff61247f827586bcaa84e8f3a9b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b8940fef2f8e89aedfcba99bc3eac80560ad022")]
 [assembly: System.Reflection.AssemblyProductAttribute("JamesLevelThreat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JamesLevelThreat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

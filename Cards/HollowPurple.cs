@@ -50,7 +50,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override CardInfo.Rarity GetRarity() 
         {
-            return CardInfo.Rarity.Rare;
+            return RarityUtils.GetRarity("Honored");
         }
         protected override CardInfoStat[] GetStats()
         {
