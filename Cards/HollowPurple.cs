@@ -21,6 +21,7 @@ namespace JamesLevelThreat.Cards
             gun.damage = 100f;
             gun.recoil = 5;
             cardInfo.allowMultiple = false;
+            gun.attackSpeed = 0.1f;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {

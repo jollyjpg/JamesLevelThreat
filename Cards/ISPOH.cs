@@ -18,8 +18,10 @@ namespace JamesLevelThreat.Cards
         {
             //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             UnityEngine.Debug.Log($"[{JamesLevelThreat.ModInitials}][Card] {GetTitle()} has been setup.");
+            cardInfo.allowMultiple = false;
             gun.unblockable = true;
-            gun.damage = 1000000;
+            gun.projectileColor = Color.white;
+            gun.ignoreWalls = true;
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
@@ -47,7 +49,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return RarityUtils.GetRarity("James");
+            return RarityUtils.GetRarity("Honored");
             //return RarityUtils.GetRarity("insertrarity"); << use when rarity is defined in jlt.css
         }
         protected override CardInfoStat[] GetStats()
