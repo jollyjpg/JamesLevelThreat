@@ -39,10 +39,10 @@ public class HeavenlyRestriction : SimpleCard
         statModifiers.health = 2;
         statModifiers.numberOfJumps = 2;
         statModifiers.attackSpeedMultiplier = 0.5f;
-        statModifiers.regen = 2;
+        statModifiers.regen = 5;
         statModifiers.tasteOfBloodSpeed = 2;
         statModifiers.sizeMultiplier = 0.5f;
-        block.healing = 2;
+        block.healing = 10;
         block.autoBlock = true;
     }
 

@@ -25,8 +25,8 @@ public class FreeDog2025 : SimpleCard
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
-        gun.ammo = 1;
         gun.attackSpeed = 5;
+        gun.projectileSpeed = 0.5f;
         gun.gravity = 0;
         gun.damage = 1.5f;
         var bomb = Resources.Load<GameObject>("0 cards/Timed Detonation").GetComponent<Gun>().objectsToSpawn[0];
@@ -36,6 +36,7 @@ public class FreeDog2025 : SimpleCard
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
         Debug.Log("Card added to the player!");
+        gunAmmo.maxAmmo = 1;
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
