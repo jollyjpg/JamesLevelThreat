@@ -96,3 +96,4 @@ C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\J
 C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\JamesLevelThreat\obj\Debug\netstandard2.1\JamesLevelThreat.dll
 C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\JamesLevelThreat\obj\Debug\netstandard2.1\JamesLevelThreat.pdb
 C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\JamesLevelThreat\bin\Debug\netstandard2.1\RarityLib.dll
+C:\Users\Zachary\AppData\Local\GitHubDesktop\JamesLevelThreat\JamesLevelThreat\JamesLevelThreat\bin\Debug\netstandard2.1\ModsPlus.dll
