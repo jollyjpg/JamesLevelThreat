@@ -30,9 +30,8 @@ public class FreeDog2025 : SimpleCard
         gun.gravity = 0;
         gun.damage = 1.5f;
         var bomb = Resources.Load<GameObject>("0 cards/Timed Detonation").GetComponent<Gun>().objectsToSpawn[0];
-        gun.objectsToSpawn = new ObjectsToSpawn[] { bomb };
         var homingThing = Resources.Load<GameObject>("0 cards/Homing").GetComponent<Gun>().objectsToSpawn[0];
-        gun.objectsToSpawn = new ObjectsToSpawn[] { homingThing };
+        gun.objectsToSpawn = new ObjectsToSpawn[] { bomb, homingThing };
     }
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
