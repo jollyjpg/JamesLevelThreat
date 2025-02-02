@@ -9,45 +9,49 @@ using UnityEngine;
 using RarityLib;
 using RarityLib.Utils;
 using ModsPlus;
-using Photon.Pun.Simple;
 
 
 namespace JamesLevelThreat.Cards
 {
-    public class DomainExpansion : CustomEffectCard<DomainEffect>
+    public class SyphilisPrime : CustomEffectCard<Syphilis>
     {
         public override CardDetails Details => new CardDetails
         {
-            Title = "Domain Expansion",
-            Description = "On block, open your domain.",
+            Title = "syphilis prime",
+            Description = "you obtain syphilis, and can spread it to others",
             ModName = "JLT",
-            Rarity = RarityUtils.GetRarity("Honored"),
-            //or use RarityUtils.GetRarity("insert") if custom rarity
+            Art = null,
+            Rarity = CardInfo.Rarity.Rare,
             Theme = CardThemeColor.CardThemeColorType.EvilPurple,
             Stats = new CardInfoStat[] {
             new CardInfoStat()
                 {
-                    positive = true,
-                    stat = "block cd",
-                    amount = "+30s",
+                    positive = false,
+                    stat = "max hp",
+                    amount = "-50%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+            new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "",
+                    amount = "contagious",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
         }
         };
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            block.cdAdd = 30;
-            var fieldToSpawn = Resources.Load<GameObject>("0 cards/Static Field").GetComponent<CharacterStatModifiers>().AddObjectToPlayer;
-            fieldToSpawn.transform.localScale = new Vector3(5, 5, 5);
-            var explosionStaticField = fieldToSpawn.GetComponent<SpawnObjects>().objectToSpawn[0];
-            explosionStaticField.GetComponent<Explosion>().damage = 5;
-            explosionStaticField.GetComponent<RemoveAfterSeconds>().seconds = 15;
-            statModifiers.AddObjectToPlayer = fieldToSpawn;
+            statModifiers.health = 0.5f;
+            gun.slow = 5;
         }
 
         protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
             Debug.Log("Card added to the player!");
+            var toxicCloud = Resources.Load<GameObject>("0 cards/Toxic Cloud").GetComponent<Gun>().objectsToSpawn[0];
+            gun.objectsToSpawn = new ObjectsToSpawn[] { toxicCloud };
+            cardInfo.allowMultiple = false;
         }
 
         protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -56,12 +60,11 @@ namespace JamesLevelThreat.Cards
         }
     }
 
-    public class DomainEffect : CardEffect
+    public class Syphilis : CardEffect
     {
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
             Debug.Log("[ExampleEffect] Player blocked!");
-            
         }
 
         public override void OnShoot(GameObject projectile)

@@ -12,30 +12,38 @@ using ModsPlus;
 using UnityEngine.Assertions;
 
 
-public class ExampleCard : SimpleCard
+public class HeavenlyRestriction : SimpleCard
 {
     public override CardDetails Details => new CardDetails
     {
-        Title = "Example Card",
-        Description = "Your first effect card",
+        Title = "Heavenly Restriction",
+        Description = "a binding vow limits your cursed energy, granting you physical prowess",
         ModName = "JLT",
         Art = null,
-        Rarity = CardInfo.Rarity.Common,
-        //RarityUtils.GetRarity("Honored")
-        Theme = CardThemeColor.CardThemeColorType.TechWhite,
+        Rarity = RarityUtils.GetRarity("BindingVow"),
+        Theme = CardThemeColor.CardThemeColorType.ColdBlue,
         Stats = new CardInfoStat[] {
             new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Effect",
-                    amount = "No",
+                    stat = "",
+                    amount = "speed",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
         }
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
-        
+        block.cdMultiplier = 0.5f;
+        statModifiers.movementSpeed = 2.5f;
+        statModifiers.health = 2;
+        statModifiers.numberOfJumps = 2;
+        statModifiers.attackSpeedMultiplier = 0.5f;
+        statModifiers.regen = 2;
+        statModifiers.tasteOfBloodSpeed = 2;
+        statModifiers.sizeMultiplier = 0.5f;
+        block.healing = 2;
+        block.autoBlock = true;
     }
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)

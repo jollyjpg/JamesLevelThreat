@@ -35,8 +35,9 @@ namespace JamesLevelThreat
             harmony.PatchAll();
 
             // rarities
-            RarityUtils.AddRarity("Honored", 0.025f, new Color(1, 0.847f, 0.514f), new Color(0.75f, 0.597f, 0.264f));
-            RarityUtils.AddRarity("James", 0.005f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
+            RarityUtils.AddRarity("BindingVow", 0.25f, new Color(0.443f, 0, 0.651f), new Color(0.267f, 0, 0.388f));
+            RarityUtils.AddRarity("Honored", 0.05f, new Color(1, 0.847f, 0.514f), new Color(0.75f, 0.597f, 0.264f));
+            RarityUtils.AddRarity("James", 0.01f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
         }
         void Start()
         {
@@ -46,6 +47,9 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<ISPOH>();
             CustomCard.BuildCard<HivelordsHubris>();
             CustomCard.BuildCard<DomainExpansion>();
+            CustomCard.BuildCard<SyphilisPrime>();
+            CustomCard.BuildCard<FreeDog2025>();
+            CustomCard.BuildCard<HeavenlyRestriction>();
         }
     }
 }
