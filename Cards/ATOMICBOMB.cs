@@ -47,13 +47,10 @@ namespace JamesLevelThreat.Cards
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
             Debug.Log("[ExampleEffect] Player blocked!");
-            var gun = new GameObject("gun").AddComponent<SimulatedGun>();
-            gun.numberOfProjectiles = 1;
-            gun.bursts = 0;
-            gun.spread = 0f;
-            gun.evenSpread = 0f;
-            gun.damage = 100;
-            gun.SimulatedAttack(this.player.playerID, new Vector3(0, 15, 0), new Vector3(0, -10, 0), 1f, 1.5f);
+            GameObject splitBulletObject = new GameObject("atomicbomb");
+            splitBulletObject.hideFlags = HideFlags.HideAndDontSave;
+            var objMono = splitBulletObject.AddComponent<AtomicBombMono>();
+            objMono.player = player;
         }
         
         public override void OnShoot(GameObject projectile)

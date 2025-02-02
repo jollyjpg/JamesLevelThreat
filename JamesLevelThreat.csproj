@@ -24,6 +24,9 @@
     <Reference Include="ModsPlus">
       <HintPath>..\..\..\..\..\Roaming\r2modmanPlus-local\ROUNDS\profiles\mod thing\BepInEx\plugins\willis81808-ModsPlus\ModsPlus.dll</HintPath>
     </Reference>
+    <Reference Include="PhotonUnityNetworking">
+      <HintPath>D:\SteamLibrary\steamapps\common\ROUNDS\ROUNDS_Data\Managed\PhotonUnityNetworking.dll</HintPath>
+    </Reference>
     <Reference Include="RarityLib">
       <HintPath>..\..\..\..\..\Roaming\r2modmanPlus-local\ROUNDS\profiles\mod thing\BepInEx\plugins\Root-RarityLib\RarityLib.dll</HintPath>
     </Reference>
