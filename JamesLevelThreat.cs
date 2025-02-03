@@ -51,6 +51,7 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<FreeDog2025>();
             CustomCard.BuildCard<HeavenlyRestriction>();
             CustomCard.BuildCard<Joker>();
+            CustomCard.BuildCard<JumpyJoker>();
         }
     }
 }
