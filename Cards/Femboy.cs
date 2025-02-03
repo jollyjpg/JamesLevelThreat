@@ -65,12 +65,11 @@ public class Femboy : SimpleCard
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card added to the player!");
         gun.projectileColor = Color.magenta;
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card removed from the player!");
+        
     }
 }

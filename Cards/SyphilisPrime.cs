@@ -34,7 +34,7 @@ namespace JamesLevelThreat.Cards
             new CardInfoStat()
                 {
                     positive = false,
-                    stat = "it is",
+                    stat = "",
                     amount = "contagious",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
@@ -48,7 +48,7 @@ namespace JamesLevelThreat.Cards
 
         protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            Debug.Log("Card added to the player!");
+            
             var toxicCloud = Resources.Load<GameObject>("0 cards/Toxic Cloud").GetComponent<Gun>().objectsToSpawn[0];
             gun.objectsToSpawn = new ObjectsToSpawn[] { toxicCloud };
             cardInfo.allowMultiple = false;
@@ -56,7 +56,7 @@ namespace JamesLevelThreat.Cards
 
         protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            Debug.Log("Card removed from the player!");
+            
         }
     }
 
@@ -64,12 +64,12 @@ namespace JamesLevelThreat.Cards
     {
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
-            Debug.Log("[ExampleEffect] Player blocked!");
+            
         }
 
         public override void OnShoot(GameObject projectile)
         {
-            Debug.Log("[ExampleEffect] Player fired a shot!");
+            
         }
 
     }

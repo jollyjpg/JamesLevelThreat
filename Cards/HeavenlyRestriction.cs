@@ -39,11 +39,11 @@ public class HeavenlyRestriction : SimpleCard
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card added to the player!");
+
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card removed from the player!");
+
     }
 }

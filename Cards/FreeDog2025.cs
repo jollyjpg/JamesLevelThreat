@@ -52,12 +52,11 @@ public class FreeDog2025 : SimpleCard
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card added to the player!");
         gunAmmo.maxAmmo = 1;
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        Debug.Log("Card removed from the player!");
+
     }
 }

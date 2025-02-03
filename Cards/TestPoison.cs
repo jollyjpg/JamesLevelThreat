@@ -24,12 +24,12 @@ public class TestPoison : CardEffect
 {
     public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
     {
-        Debug.Log("[ExampleEffect] Player blocked!");
+        
     }
 
     public override void OnShoot(GameObject projectile)
     {
-        Debug.Log("[ExampleEffect] Player fired a shot!");
+        
         projectile.AddComponent<ISPOHPoison>();
     }
 }

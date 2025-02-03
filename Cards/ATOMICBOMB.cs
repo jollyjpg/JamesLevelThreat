@@ -32,12 +32,12 @@ namespace JamesLevelThreat.Cards
 
         protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            Debug.Log("Card added to the player!");
+            
         }
 
         protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            Debug.Log("Card removed from the player!");
+            
         }
     }
 
@@ -45,13 +45,13 @@ namespace JamesLevelThreat.Cards
     {
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
-            Debug.Log("[ExampleEffect] Player blocked!");
+            
 
         }
         
         public override void OnShoot(GameObject projectile)
         {
-            Debug.Log("[ExampleEffect] Player fired a shot!");
+            
         }
 
     }
