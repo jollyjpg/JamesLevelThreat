@@ -9,7 +9,6 @@ using UnityEngine;
 using RarityLib;
 using RarityLib.Utils;
 using ModsPlus;
-using SimulationChamber;
 using UnityEngine.Assertions.Must;
 
 
@@ -47,10 +46,6 @@ namespace JamesLevelThreat.Cards
         public override void OnBlock(BlockTrigger.BlockTriggerType trigger)
         {
             Debug.Log("[ExampleEffect] Player blocked!");
-            GameObject splitBulletObject = new GameObject("atomicbomb");
-            splitBulletObject.hideFlags = HideFlags.HideAndDontSave;
-            var objMono = splitBulletObject.AddComponent<AtomicBombMono>();
-            objMono.player = player;
         }
         
         public override void OnShoot(GameObject projectile)
