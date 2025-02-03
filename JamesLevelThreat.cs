@@ -38,6 +38,7 @@ namespace JamesLevelThreat
             RarityUtils.AddRarity("BindingVow", 0.25f, new Color(0.443f, 0, 0.651f), new Color(0.267f, 0, 0.388f));
             RarityUtils.AddRarity("Honored", 0.05f, new Color(1, 0.847f, 0.514f), new Color(0.75f, 0.597f, 0.264f));
             RarityUtils.AddRarity("James", 0.01f, new Color(0, 1, 0.957f), new Color(0, 0.729f, 0.694f));
+            RarityUtils.AddRarity("femboy", 0.05f, new Color(0.984f, 0.694f, 1), new Color(0.718f, 0.502f, 0.729f));
         }
         void Start()
         {
@@ -51,6 +52,7 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<FreeDog2025>();
             CustomCard.BuildCard<HeavenlyRestriction>();
             CustomCard.BuildCard<Joker>();
+            CustomCard.BuildCard<Femboy>();
         }
     }
 }
