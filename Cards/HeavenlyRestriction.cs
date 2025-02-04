@@ -25,7 +25,7 @@ public class HeavenlyRestriction : SimpleCard
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
-        block.cdMultiplier = 0.5f;
+        block.cdMultiplier = 1.2f;
         statModifiers.movementSpeed = 2.5f;
         statModifiers.health = 2;
         statModifiers.numberOfJumps = 2;
@@ -35,6 +35,7 @@ public class HeavenlyRestriction : SimpleCard
         statModifiers.sizeMultiplier = 1;
         block.healing = 10;
         block.autoBlock = true;
+        gun.damage = 0.7f;
     }
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
