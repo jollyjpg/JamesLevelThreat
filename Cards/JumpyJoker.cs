@@ -20,7 +20,7 @@ public class JumpyJoker : SimpleCard
         Description = "If you do not have a double jump then you get touched",
         ModName = "JLT",
         Art = null,
-        Rarity = CardInfo.Rarity.Uncommon,
+        Rarity = CardInfo.Rarity.Rare,
         //RarityUtils.GetRarity("Honored")
         Theme = CardThemeColor.CardThemeColorType.EvilPurple,
         Stats = new CardInfoStat[] {
@@ -34,14 +34,14 @@ public class JumpyJoker : SimpleCard
             new CardInfoStat()
                 {
                     positive = false,
-                    stat = "health if you don't have a double jump",
+                    stat = "max health if you don't have a double jump",
                     amount = "x0.1",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 },
             new CardInfoStat()
                 {
                     positive = true,
-                    stat = "health if you have a double jump",
+                    stat = "max health if you have a double jump",
                     amount = "x2",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
@@ -54,7 +54,7 @@ public class JumpyJoker : SimpleCard
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        if(data.jumps == 1) { characterStats.health = .1f; } else { characterStats.health = 2f; }
+        if(data.jumps == 1) { data.maxHealth *= .1f; } else { data.maxHealth *= 2; }
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
