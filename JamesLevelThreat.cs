@@ -24,7 +24,7 @@ namespace JamesLevelThreat
     {
         private const string ModId = "com.zachbulb.JamesLevelThreat";
         private const string ModName = "JamesLevelThreat";
-        public const string Version = "1.0.0"; // What version are we on (major.minor.patch)?
+        public const string Version = "1.1.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "JLT";
 
         public static JamesLevelThreat instance { get; private set; }
@@ -54,6 +54,7 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<Joker>();
             CustomCard.BuildCard<Femboy>();
             CustomCard.BuildCard<JumpyJoker>();
+            CustomCard.BuildCard<Gambler>();
         }
     }
 }
