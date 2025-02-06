@@ -32,7 +32,11 @@ namespace JamesLevelThreat.Cards
 
         protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            
+            var cardlist = data.currentCards;
+            foreach (var card in cardlist){
+                var name = card.name;
+                
+            }
         }
 
         protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)

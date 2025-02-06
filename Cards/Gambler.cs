@@ -18,12 +18,12 @@ public class Gambler : SimpleCard
     public override CardDetails Details => new CardDetails
     {
         Title = "Gambler",
-        Description = "50% chance to get +1 block, 50% chance to lose HALF MAX HP.",
+        Description = "50/50 shot to get either",
         ModName = "JLT",
         Art = null,
         Rarity = CardInfo.Rarity.Rare,
         //RarityUtils.GetRarity("Honored")
-        Theme = CardThemeColor.CardThemeColorType.TechWhite,
+        Theme = CardThemeColor.CardThemeColorType.FirepowerYellow,
         Stats = new CardInfoStat[] {
             new CardInfoStat()
                 {
