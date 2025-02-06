@@ -55,7 +55,7 @@ namespace JamesLevelThreat
             CustomCard.BuildCard<Femboy>();
             CustomCard.BuildCard<JumpyJoker>();
             CustomCard.BuildCard<Gambler>();
-            CustomCard.BuildCard<ATOMICBOMB>();
+            
         }
     }
 }
