@@ -10,6 +10,7 @@ using RarityLib;
 using RarityLib.Utils;
 using ModsPlus;
 using UnityEngine.Assertions.Must;
+using System.Text.RegularExpressions;
 
 
 namespace JamesLevelThreat.Cards
@@ -35,7 +36,7 @@ namespace JamesLevelThreat.Cards
             var cardlist = data.currentCards;
             foreach (var card in cardlist){
                 var name = card.name;
-                
+                if(Regex.IsMatch(name, "HollowPurple")) { card.enabled = false; }
             }
         }
 
