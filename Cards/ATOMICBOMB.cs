@@ -36,7 +36,7 @@ namespace JamesLevelThreat.Cards
             var cardlist = data.currentCards;
             foreach (var card in cardlist){
                 var name = card.name;
-                if(Regex.IsMatch(name, "HollowPurple")) { card.enabled = false; }
+                if(Regex.IsMatch(name, "hollow purple")) { card.enabled = false; }
             }
         }
 
