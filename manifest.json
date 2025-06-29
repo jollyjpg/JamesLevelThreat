@@ -1,8 +1,8 @@
 {
-    "name": "JamesLevelThreat",
-    "version_number": "1.0.0",
-    "website_url": "https://github.com/thunderstore-io",
-    "description": "fun little card pack of 10 for me and my friends",
+    "name": "JLT",
+    "version_number": "1.3.0",
+    "website_url": "https://github.com/jollyjpg/JamesLevelThreat",
+    "description": "fun little card pack of 14 for me and my friends",
     "dependencies": [
         "willis81808-MMHook-1.0.0",
         "BepInEx-BepInExPack_ROUNDS-5.4.1901",
