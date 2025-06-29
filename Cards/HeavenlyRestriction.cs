@@ -25,6 +25,7 @@ public class HeavenlyRestriction : SimpleCard
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
+        cardInfo.allowMultiple = false;
         block.cdMultiplier = 1.2f;
         statModifiers.movementSpeed = 2.5f;
         statModifiers.health = 2;

@@ -21,7 +21,7 @@ public class Gambler : SimpleCard
         Description = "50/50 shot to get either",
         ModName = "JLT",
         Art = null,
-        Rarity = CardInfo.Rarity.Rare,
+        Rarity = CardInfo.Rarity.Uncommon,
         //RarityUtils.GetRarity("Honored")
         Theme = CardThemeColor.CardThemeColorType.FirepowerYellow,
         Stats = new CardInfoStat[] {

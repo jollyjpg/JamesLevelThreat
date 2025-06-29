@@ -11,40 +11,41 @@ using RarityLib.Utils;
 using ModsPlus;
 using UnityEngine.Assertions;
 
-
-public class Joker : SimpleCard
+public class HighRoller : SimpleCard
 {
     public override CardDetails Details => new CardDetails
     {
-        Title = "Joker",
-        Description = "size multiplier by the way",
+        Title = "High Roller",
+        Description = "randomizes ur damage; could be extremely good or extremely bad",
         ModName = "JLT",
         Art = null,
-        Rarity = CardInfo.Rarity.Common,
+        Rarity = CardInfo.Rarity.Uncommon,
         //RarityUtils.GetRarity("Honored")
-        Theme = CardThemeColor.CardThemeColorType.TechWhite,
+        Theme = CardThemeColor.CardThemeColorType.FirepowerYellow,
         Stats = new CardInfoStat[] {
             new CardInfoStat()
                 {
-                    positive = true,
-                    stat = "mult",
-                    amount = "+4",
+                    positive = false,
+                    stat = "bullet damage",
+                    amount = "random",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
         }
     };
     public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
     {
-        statModifiers.sizeMultiplier = 4;
+        var random = new System.Random();
+        var rand = (random.NextDouble() * 3);
+        gun.damage = (float)rand;
     }
 
     protected override void Added(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        
+
     }
 
     protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
     {
-        
+
     }
 }

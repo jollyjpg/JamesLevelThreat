@@ -43,7 +43,7 @@ namespace JamesLevelThreat.Cards
         }
         protected override string GetDescription()
         {
-            return "Super close range but high damage blast";
+            return "super close range but high damage blast";
         }
         protected override GameObject GetCardArt()
         {

@@ -42,6 +42,7 @@ namespace JamesLevelThreat.Cards
         };
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
+            cardInfo.allowMultiple = false;
             statModifiers.health = 0.5f;
             gun.slow = 5;
         }
@@ -51,7 +52,6 @@ namespace JamesLevelThreat.Cards
             
             var toxicCloud = Resources.Load<GameObject>("0 cards/Toxic Cloud").GetComponent<Gun>().objectsToSpawn[0];
             gun.objectsToSpawn = new ObjectsToSpawn[] { toxicCloud };
-            cardInfo.allowMultiple = false;
         }
 
         protected override void Removed(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
